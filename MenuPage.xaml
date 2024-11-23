@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shuffood.Views.MenuPage"
+             Title="Menu">
+    <Grid RowDefinitions="Auto,*"
+          Padding="20">
+        <!-- Header Label -->
+        <Label Text="Menu"
+               FontSize="24"
+               HorizontalTextAlignment="Center"
+               Grid.Row="0"
+               Margin="0,10,0,20"/>
+
+        <!-- CollectionView for menu items -->
+        <CollectionView x:Name="MenuCollectionView"
+                        Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Border around the item -->
+                    <Border WidthRequest="600"
+                            HeightRequest="210"
+                            Stroke="Black"
+                            StrokeThickness="3"
+                            StrokeShape="RoundRectangle 10"
+                            Padding="10">
+                        <!-- Content inside the border -->
+                        <VerticalStackLayout>
+                            <Image Source="{Binding Image}"
+                                   HeightRequest="110"
+                                   Aspect="AspectFill"
+                                   Margin="0,0,0,5"/>
+                            <Label Text="{Binding Name}"
+                                   FontAttributes="Bold"
+                                   FontSize="Large"
+                                   Margin="5,0,0,0"/>
+                            <Label Text="{Binding Description}"
+                                   FontSize="12"
+                                   Margin="5,0,0,0"/>
+                            <Label Text="{Binding Nation}"
+                                   FontSize="10"
+                                   TextColor="Gray"
+                                   Margin="5,0,0,0"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    <!---    <Button Text="Shuffle !"
+                FontSize="16"
+                BackgroundColor="Blue"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50"
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Clicked="OnShuffleButtonClicked"/> -->
+    </Grid>
+</ContentPage>

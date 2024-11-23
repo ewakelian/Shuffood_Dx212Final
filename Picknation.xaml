@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shuffood.Picknation"
+             Title="Pick Nation">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Pick Nation"
+               FontSize="40"
+               FontFamily="Bold"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               Margin="0,0,0,20" />
+
+        <Grid RowDefinitions="auto,auto"
+              ColumnDefinitions="*,*"
+              Padding="30"
+              RowSpacing="20"
+              ColumnSpacing="20">
+            <!-- First Row -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">
+                <ImageButton Source="dotnet_bot.png"
+                             x:Name="food1Btn"
+                             HeightRequest="150"
+                             AutomationProperties.Name="Thai Food"
+                             Clicked="OnNationButtonClicked" CommandParameter="Thailand" />
+                <Label Text="Thai"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       Margin="0,5,0,0" />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                <ImageButton Source="japanese_food.png"
+                             x:Name="food2Btn"
+                             HeightRequest="150"
+                             AutomationProperties.Name="Japanese Food"
+                             Clicked="OnNationButtonClicked" CommandParameter="Japan" />
+                <Label Text="Japanese"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       Margin="0,5,0,0" />
+            </VerticalStackLayout>
+            <!-- Second Row -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center">
+                <ImageButton Source="italian_food.png"
+                             x:Name="food3Btn"
+                             HeightRequest="150"
+                             AutomationProperties.Name="Italian Food"
+                             Clicked="OnNationButtonClicked" CommandParameter="Italian" />
+                <Label Text="Italian"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       Margin="0,5,0,0" />
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
+                <ImageButton Source="korean_food.png"
+                             x:Name="food4Btn"
+                             HeightRequest="150"
+                             AutomationProperties.Name="Korean Food"
+                             Clicked="OnNationButtonClicked" CommandParameter="Korean" />
+                <Label Text="Mexican"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       Margin="0,5,0,0" />
+            </VerticalStackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

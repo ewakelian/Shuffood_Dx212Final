@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/wake/Projects/Final/Shuffood/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/wake/Projects/Final/Shuffood/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/Shuffood.app
